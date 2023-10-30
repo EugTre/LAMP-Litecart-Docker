@@ -1,0 +1,10 @@
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+DROP USER IF EXISTS ''@'localhost';
+DROP DATABASE IF EXISTS test;
+FLUSH PRIVILEGES;
+
+CREATE DATABASE litecart;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON litecart.* TO 'admin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
